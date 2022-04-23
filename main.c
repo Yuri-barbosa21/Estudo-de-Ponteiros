@@ -13,7 +13,7 @@ void Imprimir(int *num){
 
 
 //---------------------- VETOR É SEMPRE UM PONTEIRO ------------------------
-
+/*
 void Teste(int vet[], int tam){
     int i;
     for(i = 0; i < tam; i++){
@@ -29,9 +29,20 @@ void ImprimirVetor(int vet[], int tam){
     }
     printf("\n");
 }
-    
+*/ 
 //___________________________________________________________________________
 
+
+
+//------------------- ARITMÉTICA DE PONTEIROS COM VETOR ---------------------
+void ImprimirVetor(int vet[], int tam){
+    int i;
+    for(i = 0; i < tam; i++){
+        printf("%d ", *(vet + i)); //Aritmética de ponteiros
+    }
+    printf("\n");
+}
+//___________________________________________________________________________
 
 int main(void) {
     //------------------------- COMO CRIAR UM PONTEIRO ------------------------
@@ -77,10 +88,20 @@ int main(void) {
 
 
     //---------------------- VETOR É SEMPRE UM PONTEIRO -----------------------
+    /*
     int vet[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
     ImprimirVetor(vet, 10);
     Teste(vet, 10);
+    ImprimirVetor(vet, 10);
+    */
+    //___________________________________________________________________________
+
+
+
+    //------------------- ARITMÉTICA DE PONTEIROS COM VETOR ---------------------
+    int vet[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
     ImprimirVetor(vet, 10);
     //___________________________________________________________________________
     
