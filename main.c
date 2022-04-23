@@ -50,6 +50,7 @@ void ImprimirVetor(int vet[], int tam){
 
 
 //----------------------- PONTEIRO PARA UMA STRUCT --------------------------
+/*
 typedef struct data{
     int dia, mes, ano;
 }Data;
@@ -57,6 +58,7 @@ typedef struct data{
 void ImprimirData(Data *x){
     printf("%d/%d/%d\n", x->dia, x->mes, x->ano);
 }
+*/
 //___________________________________________________________________________
 
 
@@ -126,6 +128,7 @@ int main(void) {
 
 
     //----------------------- PONTEIRO PARA UMA STRUCT --------------------------
+    /*
     Data data;
     Data *p;
 
@@ -140,6 +143,22 @@ int main(void) {
     ImprimirData(p);
     
     printf("%d/%d/%d\n", data.dia, data.mes, data.ano);
+    */
+    //___________________________________________________________________________
+
+
+
+    //------------------------ PONTEIRO PARA PONTEIRO ---------------------------
+    int a = 100, *b, **c;
+
+    b = &a;
+    c = &b;
+
+    printf("Endereço de A: %p\tConteudo de A: %d\n", &a, a);
+    printf("Endereço de B: %p\tConteudo de B: %p\n", &b, b);
+    printf("Conteudo apontedo por B: %d\n", *b);
+    printf("Endereço de C: %p\tConteudo de C: %p\n", &c, c);
+    printf("Conteudo apontedo por C: %d\n", **c);
     //___________________________________________________________________________
     
   return 0;
