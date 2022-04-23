@@ -35,6 +35,7 @@ void ImprimirVetor(int vet[], int tam){
 
 
 //------------------- ARITMÉTICA DE PONTEIROS COM VETOR ---------------------
+/*
 void ImprimirVetor(int vet[], int tam){
     int i;
     for(i = 0; i < tam; i++){
@@ -42,7 +43,22 @@ void ImprimirVetor(int vet[], int tam){
     }
     printf("\n");
 }
+*/
 //___________________________________________________________________________
+
+
+
+
+//----------------------- PONTEIRO PARA UMA STRUCT --------------------------
+typedef struct data{
+    int dia, mes, ano;
+}Data;
+
+void ImprimirData(Data *x){
+    printf("%d/%d/%d\n", x->dia, x->mes, x->ano);
+}
+//___________________________________________________________________________
+
 
 int main(void) {
     //------------------------- COMO CRIAR UM PONTEIRO ------------------------
@@ -100,9 +116,30 @@ int main(void) {
 
 
     //------------------- ARITMÉTICA DE PONTEIROS COM VETOR ---------------------
+    /*
     int vet[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
     ImprimirVetor(vet, 10);
+    */
+    //___________________________________________________________________________
+
+
+
+    //----------------------- PONTEIRO PARA UMA STRUCT --------------------------
+    Data data;
+    Data *p;
+
+    p = &data;
+
+    printf("data: %p\tp: %p\n", &data, p);
+    
+    data.dia = 29;
+    data.mes = 2;
+    data.ano = 2021;
+
+    ImprimirData(p);
+    
+    printf("%d/%d/%d\n", data.dia, data.mes, data.ano);
     //___________________________________________________________________________
     
   return 0;
